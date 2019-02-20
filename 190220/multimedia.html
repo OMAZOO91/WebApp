@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Multimedia Tag</title>
+    <link href="http://vjs.zencdn.net/c/video-js.css" rel="stylesheet">
+    <script src = "http://vjs.zencdn.net/c/video.js"></script>
+  </head>
+  <body>
+    <h1>Multimedia Tag</h1>
+    <hr / >
+    <div class="audio-tag">
+      <audio controls>
+        <!-- 코덱이 지원되지 않는 브라우저를 위해 여러형태를 넣음-->
+        <source src="./media/Kalimba.mp3" type="audio/mp3" / >
+        <source src="./media/Kalimba.ogg" type="audio/ogg" / >
+      </audio>
+    </div>
+    <div class="vidio-tag">
+      <!-- <video width="640" controls="controls" poster="http://placehold.it/640x360"autoplay loop> -->
+      <video controls="controls" width="640" height="360" class="video-js vjs-default-skin" data-setup="{}">
+        <source src="./media/Wildlife.mp4" type="video/mp4" / >
+        <source src="./media/Wildlife.webm" type="video/webm" / >
+      </video>
+    </div>
+  </body>
+</html>
