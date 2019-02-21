@@ -6,9 +6,10 @@ body {font-family: Verdana, sans-serif;}
 
 .month {
   padding: 70px 25px;
-  width: 100%;
+  width: 35%;
   background: #1abc9c;
   text-align: center;
+
 }
 
 .month ul {
@@ -37,6 +38,7 @@ body {font-family: Verdana, sans-serif;}
   margin: 0;
   padding: 10px 0;
   background-color: #ddd;
+  width : 37.6%;
 }
 
 .weekdays li {
@@ -50,6 +52,7 @@ body {font-family: Verdana, sans-serif;}
   padding: 10px 0;
   background: #eee;
   margin: 0;
+  width:37.6%
 }
 
 .days li {
