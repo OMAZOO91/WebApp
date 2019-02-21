@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+            body {
+                width: 500px; margin: 10px auto;
+            }
+            #middle {
+                overflow: hidden;
+            }
+            #left {
+                float:left; width: 150px; background: red;
+            }
+            #right {
+                float: right; width: 350px; background: orange;
+            }
+            #top {
+                background: green;
+            }
+            #bottom {
+                background: purple;
+            }
+            .top_bar {
+                background: blue; font-size: large; text-align: center;
+                position: fixed; left: 0; top: 0; right: 0; height: 40px;
+            }
+            .left_bar {
+                background: yellow; font-size: 32px;
+                position: fixed; left: 0; top: 50px; bottom: 0; width: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="top_bar">Top Bar</div>
+        <div class="left_bar">Left Bar</div>
+        <div id="top">Web Page Top</div>
+        <div id="middle">
+            <div id="left">
+                Web Page Middle Left
+            </div>
+            <div id="right">
+                Web Page Middle Right
+            </div>
+        </div>
+            <div id="bottom">
+                Web page Bottom
+            </div>
+        </div>
+
+    </body>
+</html>
