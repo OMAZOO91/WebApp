@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <title>Responsive Web</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=2.0" />
+        <!--Viewport: HTML코드 동작환경에 대한 상태정보결정시 사용.-->
+        <style>
+            h1 {
+                text-align: center;
+            }
+            body {
+                border: 10px solid green;
+                font-size: 24px;
+            }
+            @media screen and (max-width: 767px){
+                body { background-color: gray;}
+            }
+            @media screen and (min-width: 768px) and (max-width: 959px){
+                body { background-color: green;}
+            }
+            @media screen and (min-width: 960px) {
+                body{background-color: blue;}
+            }
+            @media screen and (orientation: portrait){
+                body{background-color: yellow;}
+            }
+            @media screen and (orientation: landscape){
+                body{background-color: orange;}
+            }
+        </style>
+        <link type="text/css" rel="stylesheet" href="web.css" media="screen" />
+    </head>
+    <body>
+        <h1>HTML/ CSS/ JavaScript</h1>
+        <div>
+            <p>Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language</p>
+            <p>like HTML.[1] CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.[2]CSS is designed to enable</p>
+            <p>the separation of presentation and content, including layout, colors, and fonts.[3] This separation can improve content accessibility,</p>
+            <p>provide more flexibility and control in the specification of presentation characteristics, enable multiple web pages to share formatting</p>
+            <p>by specifying the relevant CSS in a separate .css file, and reduce complexity and repetition in the structural content.</p>
+        </div>
+    </body>
+</html>
