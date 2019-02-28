@@ -85,6 +85,9 @@ class Car{
         this._userGear = gear;
         */
     }
+    toString(str){
+        return `|${this.make}|${this.model}|`;
+    }
 }
 
 let car1 = new Car('Tesla', 'Model S');
@@ -99,3 +102,46 @@ console.log(car2.get_userGear());
 console.log(car1.toString());
 console.log(car2.toString());
 console.log("----------------------------------------------------");
+function create_object(o){
+    function F(){}
+    F.prototype = o;
+
+    return new F;
+}
+person = {
+    name:"zzoon",
+    getName : function(){return this.name;},
+    setName : function(arg){ this.name = arg;}
+};
+
+var student = create_object(person);
+student.age = 28;
+student.getAge = function(){return this.age};
+console.log(student);
+console.log(student.getName());
+console.log(student.getAge());
+
+
+student.setName("me");
+student.toString = function(){ return `|${this.name}`};
+console.log(student);
+console.log(student.toString());
+console.log("-------------------------------------Bus-------------------------------");
+
+class Bus extends Car{
+    constructor(make, model, personnel){
+        super(make, model);
+        this.personnel = personnel;
+        console.log("Bus created!!!");
+    }
+
+    toString(){
+        let str = super.toString();
+        str+= `${this.personnel}|`;
+        return str;
+    }
+}
+
+let bus = new Bus("Hyundai", "Bus", 40);
+console.log(bus);
+console.log(bus.toString());
