@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>성적처리 Application</title>
+        <script src="process.js" > </script>
+    </head>
+    <body>
+        <h1>성적처리 Web Application</h1>
+        이름: <input type="text" id="name"> <br/>
+        국어: <input type="text" id="korea"> <br/>
+        영어: <input type="text" id="english"> <br/>
+        수학: <input type="text" id="math"> <br/>
+        <button onclick="print_grade()">제출</button> <br/>
+        <div id="print_field">
+        </div>
+
+        <button onclick="print_input()">입력순</button>
+        <button onclick = "print_avg()">평균순</button><br/>
+        ---------------------------------------------------------------------------------------------------
+
+        <h1>검색</h1>
+
+        <input type="text" id="find_name">
+        <button onclick = "search_name()">검색</button> <br/>
+        <div id="print_search">
+
+        </div>
+    </body>
+
+</html>
