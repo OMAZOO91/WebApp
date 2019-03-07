@@ -1,7 +1,10 @@
 $(document).ready(function(){
-    $("td").filter(function(index){
+    $("td").not(function(index){
         return index%3==0;
     }).css("background", "red");
+    // $("td").filter(function(index){
+    //     return index%3==0;
+    // }).css("background", "red");
     // $("td:first").css("background","red");
     // $("td:first-child").css("background","red");
     // $("td:last-child").css("background","yellow");

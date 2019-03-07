@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Simple HTML - JQuery</title>
+    <style>
+      /* div {
+        width: 60px;
+        height: 60px;
+        margin: 5px;
+        float: left;
+        }
+        p {
+          color: blue;
+          width: 200px;
+          font-size: 14px;
+        }
+        div {
+          width: 20px;
+          height: 15px;
+          background-color: #f33;
+          } */
+      /* p {
+        margin: 8px;
+        font-size: 16px;
+      } */
+        /* p {
+          margin: 4px;
+          font-size: 16px;
+          font-weight: bolder;
+          cursor: pointer;
+        }
+        .blue {
+          color: blue;
+        }
+        .highlight {
+          background: yellow;
+        } */
+
+        /* p {
+          margin: 20px 0 0;
+        }
+        b {
+          color: blue;
+        } */
+
+        div {border:1px solid blue;}
+        .print {margin-top:10px;height:50px;}
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Simple HTML -JQuery</h1>
+    </header>
+    <div>
+        <ul>
+            <li>list item0</li>
+        </ul>
+        <input type="button" id="btnAdd" value="Add list element">
+        <input type="button" id="btnDie" value="Event Die">
+    </div>
+    <button>Toogle</button>
+    <div class="page">
+        <h1>JQuery Effects</h1>
+        <p>The JQuery library provides several tech~~~</p>
+    </div>
+    <div class="print"></div>
+    <div id="box"></div>
+    <div class="box2">
+
+    </div>
+    <!-- <span id="result">&nbsp;</span>
+    <div style="background-color:blue;"></div>
+    <div style="background-color:rgb(15,99,30);"></div>
+    <div style="background-color:#123456;"></div>
+    <div style="background-color:#f11;"></div>
+    <p>Just roll the mouse over me.</p>
+    <p>Or me to see a color change.</p>
+    <div>click</div>
+    <div>click</div> -->
+
+    <!-- <p>This paragraph is black and is the first paragraph.</p>
+    <p class="selected">This paragraph is red and is the second paragraph.</p>
+    <div id="result1">First paragraph has selected class: </div>
+    <div id="result2">Second paragraph has selected class: </div>
+    <div id="result3">At least one paragraph has selected class: </div> -->
+
+    <!-- <p class="blue">Click to toggle</p>
+    <p class="blue highlight">highlight</p>
+    <p class="blue">on these</p>
+    <p class="blue">paragraphs</p> -->
+
+    <!-- <input id="check1" type="checkbox" checked="checked">
+    <label for="check1">Check me</label>
+    <p></p> -->
+
+    <!-- <input type="text" name="txtName" id="txtName" /> -->
+    <div id="mouse">AREA(DIV) MOUSE : <span id="resultenter"></span> <span id="resultleave"></span></div>
+
+    <div>
+      <input type="text" id="txtText" /><br />
+      <input type="text" id="txtKeycode" />
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.9.25/paper-full.min.js"></script>
+    <script>
+      // $( "div" ).click(function() {
+      // var color = $( this ).css( "background-color" );
+      // $( "#result" ).html( "That div is <span style='color:" +
+      //   color + ";'>" + color + "</span>." );
+      // });
+      // $( "p" ).on( "mouseover", function() {
+      // $( this ).css( "color", "red" );
+      // });
+      // $( "div" ).on( "click", function() {
+      //   $( this ).css({
+      //     width: function( index, value ) {
+      //       return parseFloat( value ) * 1.2;
+      //     },
+      //     height: function( index, value ) {
+      //       return parseFloat( value ) * 1.2;
+      //     }
+      //   });
+      // });
+
+      // $( "#result1" ).append( $( "p:first" ).hasClass( "selected" ).toString() );
+      // $( "#result2" ).append( $( "p:last" ).hasClass( "selected" ).toString() );
+      // $( "#result3" ).append( $( "p" ).hasClass( "selected" ).toString() ) ;
+
+      // $( "p" ).click(function() {
+      //   $( this ).toggleClass( "highlight" );
+      // });
+
+      // $( "input" )
+      // .change(function() {
+      //   var $input = $( this );
+      //   $( "p" ).html( ".attr( 'checked' ): <b>" + $input.attr( "checked" ) + "</b><br>" +
+      //     ".prop( 'checked' ): <b>" + $input.prop( "checked" ) + "</b><br>" +
+      //     ".is( ':checked' ): <b>" + $input.is( ":checked" ) + "</b>" );
+      // })
+      // .change();
+
+      // $("input").change(function(){
+      //   var name = $("#txtName").val();
+      //   console.log(name);
+      // })
+      // $(document).ready(function(){
+      //   $("#txtName").val("Input data...");
+      // });
+
+      // $(document).ready(function(){
+      //   $("h1").click(function(){
+      //     $("div").html("<p>Event : click </p>");
+      //   })
+      //   $("h1").hover(function(){
+      //     $(this).css({background:'',color:''});
+      //   });
+      // });
+      let countenter = 0;
+      let countleave = 0;
+      // $(document).ready(function(){
+        // $("#mouse").bind("mouseenter mouseleave",function(e){
+        //   ++count;
+        //   $("#result").text(count+"enter or leave");
+        // });
+
+        // $("#mouse").bind("mouseenter mouseleave",function(e){
+        //   if(e.type==='mouseenter'){
+        //     ++countenter;
+        //     $("#resultenter").text(countenter+" enter");
+        //   }
+        //   else{
+        //     ++countleave;
+        //     $("#resultleave").text(countleave+" leave");
+        //   }
+        //
+        // });
+        $(document).ready(function(){
+            $(".box2").css({
+                width:100, height:100, background:'red'
+            }).animate({
+                width:300, opacity:0.5
+            },500);
+
+
+            $("button").click(function(){
+                $(".page").fadeToggle("slow");
+            })
+
+            $("#box").css({
+                width:100, height:100, background: 'orange'
+            }).on('click', function(){
+                $(this).css('background', 'red');
+            }).on('mouseenter', function(){
+                $(this).css('background', 'blue');
+            }).on('mouseleave',function(){
+                $(this).css('background','orange');
+            });
+
+            $("#btnDie").click(function(){
+                $("li").die();
+            })
+            $("#btnAdd").click(function(){
+                $("ul").append('<li>list item add(' + $('li').length + ')</li>');
+            });
+
+            $("li").live("click", function(){
+                $(".print").html("<p>"+ $(this).text() + "</p>");
+            });
+
+          $("#mouse").bind({
+            mouseenter:function(){++countenter;
+              $("#resultenter").text(countenter + " mouse enter");},
+            mouseleave:function(){++countleave;
+              $("#resultleave").text(countleave + " mouse leave");}
+          });
+        $("#txtText").keydown(function(e){
+          $("#txtKeycode").val(e.keyCode);
+        });
+          $("h1").click(function(){
+            $("div").html("<p>Event : click </p>");
+          })
+          $("h1").hover(function(){
+            $(this).css({background:'',color:''});
+          });
+      });
+
+    </script>
+  </body>
+</html>

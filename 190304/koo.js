@@ -11,7 +11,8 @@ function input_score(){
     sortTable();
 }
 
-function add_row(name, korean_language, english, math){
+function add_row(name,
+     korean_language, english, math){
     var my_tbody = document.getElementById('table');
     var row = my_tbody.insertRow( my_tbody.rows.length ); // 하단에 추가
     var cell1 = row.insertCell(0);
