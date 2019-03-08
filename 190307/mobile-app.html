@@ -4,22 +4,33 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title></title>
-        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.9.25/paper-full.min.js"></script>
-        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.2/jquery.mobile-1.1.2.min.css" />
+        <script src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.1.2/jquery.mobile-1.1.2.min.js"></script>
     </head>
     <body>
-        <div data-role="page" id="home">
+        <div data-role="page" id="page1">
             <div data-role="header">
-                <h1>Page Title</h1>
+                <h1>Page Title(Home)</h1>
             </div>
             <div data-role="content ">
                 <p>Page content goes here.</p>
+                <a href="#page2" data-transition="fade">Page2</a>
+                <a href="../190308/mobile-app-page3.html#page3" data-ajax="false">Page 3</a>
+                <a href="http://m.naver.com/index.html" target="_blank">Naver</a>
+                <a href="https://www.google.com/maps/@37.5392375,126.9003409,14z">Google map 링크</a>
             </div>
-            <div data-role="footer">
-                <h4>Page Footer</h4>
-            </div>
+            <div data-role="footer"><h4>Page Footer</h4></div>
+        </div>
+            <div data-role="page" id="page2">
+                <div data-role = "header"><h1>Page Title(Page 2) </h1></div>
+                <div data-role="content ">
+                    <p>Page content goes here. #2</p>
+                    <a href="#page1">Page1</a>
+                </div>
+                <div data-role="footer">
+                    <h4>Page Footer</h4>
+                </div>
         </div>
     </body>
 </html>
